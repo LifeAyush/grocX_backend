@@ -1,0 +1,70 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+.env/
+.envrc/
+
+# Logs and database
+logs/
+*.log
+db.sqlite3
+*.db
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.iml
+
+# Cache and pip files
+pip-log.txt
+pip-delete-this-directory.txt
+__pypackages__/
+
+# Pytest cache
+.pytest_cache/
+
+# MyPy cache
+.mypy_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+*.py,cover
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Docker related files
+*.pid
+dist/
+build/
+*.dockerignore
+
+# Poetry / Pipenv / Pip tools
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Local .env file (for secrets & configs)
+.env
+*.secrets
+
+# Celery specific files
+celerybeat-schedule
+
+# Alembic migrations
+migrations/
+
+# Gunicorn logs
+gunicorn.log
+gunicorn.error.log
