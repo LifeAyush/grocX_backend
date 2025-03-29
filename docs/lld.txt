@@ -1,0 +1,29 @@
+1. API Layer:
+   - PriceRouter: Handles HTTP requests/responses for the /get_prices endpoint
+   - Request Models: Validates and processes incoming requests
+   - Response Models: Structures and formats outgoing responses
+
+2. Service Layer:
+   - ScraperManager: Coordinates concurrent scraping operations across all platforms
+   - ProductMappingService: Maps user-provided product names to platform-specific names
+   - PriceOptimizerService: Optimizes basket selection for lowest total price
+
+3. Scraper Layer:
+   - BaseScraper: Abstract base class defining the interface for all scrapers
+   - PlatformAScraper, PlatformBScraper, etc.: Platform-specific implementations
+   - Each scraper has methods for:
+     - get_price(): Fetches price for a product
+     - get_discount(): Fetches available discounts for a product
+
+4. Utility Layer:
+   - AsyncUtils: Manages concurrent operations and timeouts
+   - Cache: Implements short-lived caching for scraped data
+   - Validators: Custom validation logic
+
+5. Configuration Layer:
+   - AppConfig: Loads and manages application configuration
+   - ProductMapping: Loads and provides access to product mapping data
+
+6. Error Handling:
+   - Custom exceptions for scraping errors, optimization errors, etc.
+   - Graceful error responses with appropriate status codes

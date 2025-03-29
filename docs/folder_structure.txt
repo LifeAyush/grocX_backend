@@ -1,0 +1,56 @@
+price_comparison_api/
+├── docs/
+│   ├── folder_structure.txt     # Ideal folder structure
+│   ├── lld.txt                  # General Low Level Design
+├── app/
+│   ├── __init__.py
+│   ├── main.py                  # FastAPI application entry point
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── endpoints/
+│   │   │   ├── __init__.py
+│   │   │   └── router.py        # API router for price endpoints
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── config.py            # Application configuration
+│   │   └── exceptions.py        # Custom exceptions
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── request.py           # Pydantic models for request validation
+│   │   └── response.py          # Pydantic models for response formatting
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── product_mapping.py   # Service to map product names across platforms
+│   │   ├── price_optimizer.py   # Service to optimize the basket
+│   │   └── scraper_manager.py   # Service to manage all scrapers
+│   ├── scrapers/
+│   │   ├── __init__.py
+│   │   ├── base_scraper.py      # Abstract base class for scrapers
+│   │   ├── platform_a.py        # Platform A specific scraper
+│   │   ├── platform_b.py        # Platform B specific scraper
+│   │   ├── platform_c.py        # Platform C specific scraper
+│   │   └── platform_d.py        # Platform D specific scraper
+│   └── utils/
+│       ├── __init__.py
+│       ├── async_utils.py       # Async utilities for concurrent operations
+│       ├── cache.py             # Caching utilities
+│       └── validators.py        # Custom validators
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py
+│   ├── api/
+│   │   └── test_router.py
+│   ├── scrapers/
+│   │   ├── test_scraper_a.py             
+│   │   └── test_scraper_b.py   
+│   └── services/
+│       └── test_price_optimizer.py
+├── data/
+│   └── product_mappings.json    # JSON file for product mapping across platforms
+├── config/
+│   ├── logging_config.json      # Logging configuration
+│   └── settings.json            # General settings
+├── .env                         # Environment variables
+├── requirements.txt             # Project dependencies
+├── Dockerfile                   # Docker configuration
+└── README.md                    # Project documentation
